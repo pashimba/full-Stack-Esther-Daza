@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video App - Edición Profesional</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <!-- SECCION DE NAVBAR -->
+  <nav class="nav-bar">
+    <div class="logo">VideoApp</div>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="index.html">Inicio</a></li>
+      <li class="nav-item"><a href="functions.html">Funciones</a></li>
+      <li class="nav-item"><a href="prices.html">Precios</a></li>
+      <li class="nav-item"><a href="download.html" class="btn-nav">Descargar</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="titulo-principal">Video APP Creator</h1>
+      <h2 class="subtitulo">Empieza a editar sin límites</h2>
+      <p class="descripcion">
+        Una herramienta completa, intuitiva y potente para llevar tus
+        historias al siguiente nivel.
+      </p>
+      <button class="btn-primary" id="prueba-gratis">Prueba Gratis</button>
+    </div>
+  </section>
+
+
+  <section class="features-section">
+    <div class="cards-container">
+      <div class="card">
+        <h3>Mejora tus videos</h3>
+        <p>Herramientas de IA para corregir color y audio automáticamente.</p>
+      </div>
+      <div class="card">
+        <h3>Efectos Creativos</h3>
+        <p>Miles de transiciones, filtros y elementos listos para usar.</p>
+      </div>
+      <div class="card">
+        <h3>Exportación Rápida</h3>
+        <p>
+          Publica tus videos en 4K para YouTube, TikTok o Instagram en un
+          clic.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCION DESCUBRE LA INTERAZ -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <h2 class="section-title">Descubre la Interfaz</h2>
+
+      <div class="carousel-window">
+        <div class="carousel-track" id="track">
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="img/int-img1.webp" alt="Interfaz" />
+            </div>
+            <div class="card-text">
+              <h3>Interfaz Intuitiva</h3>
+              <p>
+                Diseñada para que cualquier persona pueda crear videos
+                profesionales sin experiencia previa. Arrastra y suelta
+                elementos fácilmente.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="img/int-img2.jpg" alt="Filtros" />
+            </div>
+            <div class="card-text">
+              <h3>Filtros Avanzados</h3>
+              <p>
+                Aplica filtros de cine, corrección de color y efectos visuales
+                impactantes para mejorar el aspecto visual de tus videos al
+                instante.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="img/int-img3.jpg" alt="Exportación" />
+            </div>
+            <div class="card-text">
+              <h3>Exportación Rápida</h3>
+              <p>
+                Renderiza a máxima velocidad. Publica tus videos en 4K
+                optimizados para YouTube, TikTok o Instagram en un solo clic.
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel-card">
+            <div class="card-image">
+              <img src="img/int-img4.webp" alt="IA" />
+            </div>
+            <div class="card-text">
+              <h3>Herramientas de IA</h3>
+              <p>
+                Ahorra horas de trabajo. Corrige automáticamente el audio,
+                elimina fondos y genera subtítulos con tecnología de
+                inteligencia artificial.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-btn btn-prev" id="prevBtn">&#10094;</button>
+        <button class="carousel-btn btn-next" id="nextBtn">&#10095;</button>
+
+        <div class="carousel-dots" id="dots-container"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCION DE OPINIONES  -->
+  <section class="opinions-section">
+    <div class="opinions-container">
+      <div class="section-header">
+        <h2 class="section-title">Lo que dicen los creadores</h2>
+        <p class="section-subtitle">
+          Únete a más de 10,000 usuarios satisfechos
+        </p>
+      </div>
+
+      <div class="opinions-grid">
+        <div class="opinion-card">
+          <div class="card-header">
+            <img src="img/usr-img1.jpg" alt="Ana M." class="user-avatar" />
+            <div class="user-info">
+              <h4>Gatorro Porro</h4>
+              <span>Creador de Contenido</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="opinion-text">
+            "Excelente herramienta. Nunca había editado antes y logré un
+            resultado profesional en mi primer intento. La biblioteca de
+            música es un gran plus."
+          </p>
+        </div>
+
+        <div class="opinion-card featured-card">
+          <div class="card-header">
+            <img src="img/usr-img2.jpg" alt="Carlos R." class="user-avatar" />
+            <div class="user-info">
+              <h4>El gato Carlos</h4>
+              <span>Youtuber Tech</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="opinion-text">
+            "La interfaz es increíblemente intuitiva. Lo que antes me tomaba 2
+            horas en otros programas, aquí lo hago en 30 minutos. 100%
+            recomendado."
+          </p>
+        </div>
+
+        <div class="opinion-card">
+          <div class="card-header">
+            <img src="img/usr-img3.jpg" alt="María L." class="user-avatar" />
+            <div class="user-info">
+              <h4>El Zar de Rusia</h4>
+              <span>Marketing Manager</span>
+            </div>
+          </div>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="opinion-text">
+            "Las herramientas de IA son una locura. La función de subtítulos
+            automáticos me ha ahorrado muchísimo trabajo manual. Vale cada
+            centavo."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tools-section">
+    <div class="tools-container">
+      <h2 class="tools-title">Herramientas Profesionales</h2>
+      <p class="tools-subtitle">Todo lo que necesitas para crear contenido de nivel profesional</p>
+      <div class="tools-grid">
+        <div class="tool-card">
+          <div class="tool-icon"><i class="fas fa-cut"></i></div>
+          <h3>Corte Preciso</h3>
+          <p>Edita fotograma a fotograma con la línea de tiempo más precisa del mercado.</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon"><i class="fas fa-music"></i></div>
+          <h3>Biblioteca Musical</h3>
+          <p>Más de 10,000 pistas libres de derechos para musicalizar tus proyectos.</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon"><i class="fas fa-closed-captioning"></i></div>
+          <h3>Subtítulos con IA</h3>
+          <p>Genera subtítulos automáticos en más de 50 idiomas con un solo clic.</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon"><i class="fas fa-magic"></i></div>
+          <h3>Efectos Especiales</h3>
+          <p>Cientos de transiciones, overlays y efectos de texto animados listos para usar.</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon"><i class="fas fa-palette"></i></div>
+          <h3>Color Grading</h3>
+          <p>Aplica LUTs cinematográficos y ajusta colores con herramientas profesionales.</p>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+          <h3>Publicación Directa</h3>
+          <p>Exporta y publica directamente a YouTube, TikTok, Instagram y más.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3 class="footer-logo">VideoApp</h3>
+        <p class="footer-text">
+          La herramienta definitiva para creadores de contenido. Edita,
+          transforma y comparte tus historias con el mundo.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul class="footer-links">
+          <li><a href="#">Descargar</a></li>
+          <li><a href="#">Precios</a></li>
+          <li><a href="#">Tutoriales</a></li>
+          <li><a href="#">Novedades</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Soporte</h4>
+        <ul class="footer-links">
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Términos de Servicio</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contáctanos</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> soporte@videoapp.com</p>
+          <p><i class="fas fa-phone"></i> + (591) 123-4567</p>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 VideoApp Inc. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1443 @@
+/* --- Variables y Reset --- */
+:root {
+    --primary-color: #00d2be;
+    /* Color estilo Filmora (verde azulado) */
+    --primary-dark: #00a896;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --white: #ffffff;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Fundamental para maquetar */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Fuente moderna */
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Barra de Navegación --- */
+nav {
+    display: flex;
+    /* Flex, no flexbox */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    /* 5% a los lados para dar aire */
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -1px;
+}
+
+nav .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+nav .nav-item a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav .nav-item a:hover {
+    color: var(--primary-color);
+}
+
+/* Botón especial en el nav */
+.btn-nav {
+    background-color: var(--text-dark);
+    color: var(--white) !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background 0.3s ease !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-color);
+}
+
+/* --- Hero Section (Inicio) --- */
+.hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, var(--white) 0%, #e0f7fa 100%);
+    /* Degradado sutil */
+}
+
+.titulo-principal {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    /* Efecto de texto degradado moderno */
+    background: linear-gradient(to right, #2c3e50, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitulo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 210, 190, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 210, 190, 0.6);
+    background-color: var(--primary-dark);
+}
+
+/* --- Cards Section --- */
+.features-section {
+    padding: 80px 5%;
+    background-color: var(--white);
+}
+
+.cards-container {
+    display: grid;
+    /* Grid responsivo: se adapta automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+    /* Alinear texto a la izquierda se ve más pro en cards */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* Efecto de elevación al pasar el mouse */
+    border-color: var(--primary-color);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.card p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* --- Sección Carrusel (Dark Theme) --- */
+.carousel-section {
+    background-color: #111827;
+    /* Fondo oscuro estilo editor de video */
+    padding: 80px 0;
+    color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    background: linear-gradient(to right, #00d2be, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Contenedor principal centrado */
+.carousel-container {
+    max-width: 1000px;
+    /* Ancho máximo para que no se estire demasiado */
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* La ventana que oculta lo que no se ve */
+.carousel-window {
+    overflow: hidden;
+    /* CRUCIAL: Oculta los slides que no están activos */
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    background-color: #1f2937;
+    /* Fondo de la tarjeta */
+    position: relative;
+}
+
+/* La pista larga que contiene todos los slides */
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Movimiento suave */
+}
+
+/* Cada Slide individual */
+.carousel-card {
+    min-width: 100%;
+    /* Ocupa el 100% de la ventana */
+    display: flex;
+    /* Flex para poner Imagen Izq / Texto Der */
+    align-items: center;
+}
+
+/* Mitad Imagen */
+.card-image {
+    width: 55%;
+    height: 400px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Recorta la imagen para llenar el espacio sin deformar */
+}
+
+/* Mitad Texto */
+.card-text {
+    width: 45%;
+    padding: 40px;
+}
+
+.card-text h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.card-text p {
+    font-size: 1.1rem;
+    color: #d1d5db;
+    /* Gris claro para leer sobre fondo oscuro */
+    line-height: 1.8;
+}
+
+/* --- Botones de Navegación --- */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.btn-prev {
+    left: 20px;
+}
+
+.btn-next {
+    right: 20px;
+}
+
+/* --- Puntos Indicadores --- */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+
+/* --- Footer Styles --- */
+
+.site-footer {
+    background-color: #0b0f19;
+    /* Un tono más oscuro que la sección anterior */
+    color: #9ca3af;
+    /* Gris claro para el texto, no blanco puro (cansa la vista) */
+    padding-top: 70px;
+    /* Grosor superior */
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    /* Esto crea columnas automáticas de mínimo 250px de ancho */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding-bottom: 60px;
+    /* Espacio antes de la barra de copyright */
+}
+
+/* Títulos de las columnas */
+.footer-col h4 {
+    color: #fff;
+    /* Títulos en blanco para destacar */
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+}
+
+/* Logo en el footer */
+.footer-logo {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Listas de enlaces */
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Efecto hover: cambia de color y se mueve un poco a la derecha */
+.footer-links a:hover {
+    color: var(--primary-color);
+    /* Usa el color turquesa de tu marca */
+    padding-left: 5px;
+}
+
+/* Información de contacto */
+.contact-info p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Redes Sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #1f2937;
+    /* Fondo gris oscuro para el botón */
+    color: #fff;
+    border-radius: 50%;
+    /* Círculo perfecto */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    /* Se pone turquesa al pasar el mouse */
+    transform: translateY(-3px);
+    /* Se eleva un poco */
+}
+
+/* Barra inferior (Copyright) */
+.footer-bottom {
+    background-color: #05080f;
+    /* Casi negro */
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #1f2937;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* --- Sección de Opiniones --- */
+.opinions-section {
+    padding: 100px 20px;
+    background-color: #f3f4f6;
+    /* Gris muy suave para diferenciar del blanco */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Reutilizamos estilos del título anterior pero ajustamos color */
+.opinions-section .section-title {
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+/* --- Grid System (La "Tabla") --- */
+.opinions-grid {
+    display: grid;
+    /* Esto crea columnas automáticas. Si hay espacio caben 3, sino 2, sino 1 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Diseño de la Tarjeta --- */
+.opinion-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    /* Para que nada se salga de los bordes redondos */
+    border: 1px solid transparent;
+}
+
+/* Efecto Hover: La tarjeta flota */
+.opinion-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+    /* Borde sutil al pasar mouse */
+}
+
+/* Decoración: Comillas gigantes de fondo */
+.opinion-card::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 150px;
+    color: #f3f4f6;
+    /* Gris muy clarito */
+    font-family: serif;
+    z-index: 0;
+    /* Detrás del texto */
+    pointer-events: none;
+}
+
+/* --- Header de la Tarjeta (Foto y Nombre) --- */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    /* Para estar encima de las comillas */
+    z-index: 1;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f9fafb;
+}
+
+.user-info h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #111827;
+}
+
+.user-info span {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    /* Texto secundario */
+}
+
+/* --- Estrellas --- */
+.stars {
+    color: #fbbf24;
+    /* Color amarillo/dorado */
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Texto de la opinión --- */
+.opinion-text {
+    color: #4b5563;
+    line-height: 1.6;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Estilos Generales  la Página de funciones  --- */
+.page-header {
+    background-color: #111827;
+    /* Fondo oscuro */
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #00d2be, #ffffff);
+    /* Texto degradado */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- SECCIÓN 1: CARDS GRANDES --- */
+.features-section {
+    padding: 80px 5%;
+    background-color: var(--bg-light);
+}
+
+.features-grid {
+    display: grid;
+    /* Grid responsivo: mínimo 350px de ancho por tarjeta */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card-large {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    /* Para que la imagen respete los bordes redondos */
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.feature-card-large:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 250px;
+    /* Altura fija para la imagen */
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* La imagen llena el espacio sin deformarse */
+    transition: transform 0.5s ease;
+}
+
+/* Efecto zoom en la imagen al pasar el mouse */
+.feature-card-large:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.card-content p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* --- SECCIÓN 2: TIMELINE (Línea de Tiempo) --- */
+.timeline-section {
+    padding: 100px 20px;
+    background-color: white;
+    position: relative;
+}
+
+.timeline-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+    color: var(--text-dark);
+}
+
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ESTA ES LA LÍNEA VERTICAL CENTRAL */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    /* Justo al centro */
+    transform: translateX(-50%);
+    width: 4px;
+    /* Grosor de la línea */
+    height: 100%;
+    background-color: #e5e7eb;
+    /* Color gris suave */
+    z-index: 0;
+}
+
+/* Fila individual */
+.timeline-row {
+    display: flex;
+    justify-content: space-between;
+    /* Elementos a los extremos */
+    align-items: center;
+    margin-bottom: 100px;
+    /* Separación vertical entre items */
+    position: relative;
+}
+
+/* Contenido (Cajas izquierda y derecha) */
+.timeline-content {
+    width: 45%;
+    /* Ocupa un poco menos de la mitad */
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos específicos para imágenes en el timeline */
+.timeline-content img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 5px solid white;
+    /* Marco blanco */
+}
+
+/* Estilos específicos para texto en el timeline */
+.text-box {
+    padding: 20px;
+}
+
+.text-box h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.text-box p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* El detalle pequeño en cursiva/gris */
+.detail-note {
+    display: inline-block;
+    background-color: #f3f4f6;
+    color: var(--text-dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-left: 3px solid var(--primary-color);
+}
+
+/* EL PUNTO CENTRAL (BOLITA) */
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    /* Color turquesa */
+    border-radius: 50%;
+    border: 4px solid white;
+    /* Borde blanco para separar de la línea */
+    box-shadow: 0 0 0 4px #e5e7eb;
+    /* Segundo borde gris */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centrado perfecto */
+    z-index: 2;
+}
+
+/* --- RESPONSIVE (Móvil) --- */
+@media (max-width: 768px) {
+
+    /* En móvil, la línea desaparece o se mueve a un lado, simplifiquemos: */
+    .timeline-container::before {
+        left: 20px;
+        /* Línea a la izquierda */
+    }
+
+    .timeline-row {
+        flex-direction: column;
+        /* Apilar uno sobre otro */
+        margin-bottom: 60px;
+    }
+
+    .timeline-content {
+        width: 100%;
+        /* Ancho completo */
+        padding-left: 50px;
+        /* Espacio para la línea */
+        margin-bottom: 20px;
+    }
+
+    .left-content,
+    .right-content {
+        text-align: left;
+        /* Alinear todo a la izquierda */
+    }
+
+    /* Ordenar para que siempre salga Imagen primero, luego texto */
+    .timeline-row .text-box {
+        order: 2;
+    }
+
+    .timeline-row img {
+        order: 1;
+    }
+
+    .timeline-dot {
+        left: 20px;
+        /* Punto a la izquierda */
+    }
+}
+
+
+
+/* (Opcional) Tarjeta Destacada del centro */
+@media (min-width: 1024px) {
+    .featured-card {
+        transform: scale(1.05);
+        /* Un poco más grande por defecto */
+        border: 1px solid var(--primary-color);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .featured-card:hover {
+        transform: scale(1.05) translateY(-10px);
+    }
+}
+
+
+
+
+/* Responsive: Ajustes para móviles muy pequeños */
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        /* Una sola columna en celulares */
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-info p {
+        justify-content: center;
+    }
+}
+
+
+/* --- Responsive (Móvil) --- */
+@media (max-width: 768px) {
+    .carousel-card {
+        flex-direction: column;
+        /* En móvil, imagen arriba, texto abajo */
+    }
+
+    .card-image,
+    .card-text {
+        width: 100%;
+    }
+
+    .card-image {
+        height: 250px;
+    }
+
+    .card-text {
+        padding: 25px;
+        text-align: center;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+/* --- Responsivo para móviles --- */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 2.5rem;
+    }
+
+    nav .nav-list {
+        display: none;
+        /* En un caso real, aquí iría un menú hamburguesa */
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+/* --- Sección Herramientas (Index) --- */
+.tools-section {
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #f3f4f6 0%, #ffffff 100%);
+}
+
+.tools-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tools-title {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.tools-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 60px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tool-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.tool-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 30px rgba(0, 210, 190, 0.1);
+}
+
+.tool-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), #00a896);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover .tool-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.tool-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.tool-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- Página de Precios --- */
+.pricing-section {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.pricing-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 30px;
+    border: 1px solid #eee;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-featured {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 210, 190, 0.2);
+}
+
+.pricing-featured:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--primary-color), #00a896);
+    color: white;
+    padding: 8px 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 0 0 0 20px;
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.pricing-price {
+    margin-bottom: 10px;
+}
+
+.price-amount {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1;
+}
+
+.price-cents {
+    font-size: 1.8rem;
+}
+
+.price-period {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.pricing-desc {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.pricing-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f3f4f6;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pricing-features li i.fa-check {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+}
+
+.pricing-features li i.fa-times {
+    color: #d1d5db;
+    font-size: 0.85rem;
+}
+
+.feature-disabled {
+    color: #d1d5db !important;
+}
+
+.btn-pricing {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0;
+    background-color: var(--text-dark);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-pricing:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 210, 190, 0.4);
+}
+
+.btn-pricing-featured {
+    background: linear-gradient(135deg, var(--primary-color), #00a896);
+}
+
+.btn-pricing-featured:hover {
+    background: linear-gradient(135deg, #00a896, #008b7a);
+    box-shadow: 0 6px 20px rgba(0, 210, 190, 0.5);
+}
+
+/* --- Tabla Comparativa --- */
+.comparison-section {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+.comparison-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.comparison-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid #eee;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.comparison-table thead {
+    background-color: #111827;
+    color: white;
+}
+
+.comparison-table th {
+    padding: 18px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.comparison-table th:first-child {
+    text-align: left;
+}
+
+.comparison-table td {
+    padding: 16px 20px;
+    text-align: center;
+    border-bottom: 1px solid #f3f4f6;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+.comparison-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.col-featured {
+    background-color: rgba(0, 210, 190, 0.05);
+    font-weight: 600;
+}
+
+thead .col-featured {
+    background-color: var(--primary-color);
+}
+
+/* --- Página de Descarga --- */
+.download-section {
+    padding: 80px 20px;
+    background-color: var(--bg-light);
+}
+
+.download-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.download-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 50px 30px;
+    border: 1px solid #eee;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.download-card-featured {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.03);
+}
+
+.download-card-featured:hover {
+    transform: scale(1.03) translateY(-8px);
+}
+
+.download-icon {
+    font-size: 4rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.download-card:hover .download-icon {
+    color: var(--primary-color);
+}
+
+.download-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.download-version {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.download-size,
+.download-compat {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.download-compat {
+    margin-bottom: 25px;
+}
+
+.btn-download {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0;
+    background-color: var(--text-dark);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 210, 190, 0.4);
+}
+
+.btn-download-featured {
+    background: linear-gradient(135deg, var(--primary-color), #00a896);
+}
+
+.btn-download-featured:hover {
+    background: linear-gradient(135deg, #00a896, #008b7a);
+}
+
+.btn-download i {
+    margin-right: 8px;
+}
+
+/* --- Requisitos del Sistema --- */
+.requirements-section {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+.requirements-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.requirements-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 50px;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.requirement-card {
+    background: var(--bg-light);
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.requirement-card:hover {
+    transform: translateY(-5px);
+}
+
+.requirement-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.requirement-card h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.requirement-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* --- FAQ Accordion --- */
+.faq-section {
+    padding: 80px 20px;
+    background-color: #f3f4f6;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--primary-color);
+}
+
+.faq-arrow {
+    transition: transform 0.3s ease;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.faq-active .faq-arrow {
+    transform: rotate(180deg);
+    color: var(--primary-color);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 25px;
+}
+
+.faq-active .faq-answer {
+    max-height: 300px;
+    padding: 0 25px 20px;
+}
+
+.faq-answer p {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* --- Responsive para nuevas secciones --- */
+@media (max-width: 768px) {
+    .pricing-featured {
+        transform: scale(1);
+    }
+
+    .pricing-featured:hover {
+        transform: translateY(-8px);
+    }
+
+    .download-card-featured {
+        transform: scale(1);
+    }
+
+    .download-card-featured:hover {
+        transform: translateY(-8px);
+    }
+
+    .tools-title,
+    .pricing-card h3,
+    .comparison-title,
+    .requirements-title,
+    .faq-title {
+        font-size: 1.8rem;
+    }
+}

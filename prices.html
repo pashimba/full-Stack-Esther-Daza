@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VideoApp - Planes y Precios</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- SECCION DE NAVBAR -->
+  <nav class="nav-bar">
+    <div class="logo">VideoApp</div>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="index.html">Inicio</a></li>
+      <li class="nav-item"><a href="functions.html">Funciones</a></li>
+      <li class="nav-item"><a href="prices.html">Precios</a></li>
+      <li class="nav-item"><a href="download.html" class="btn-nav">Descargar</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>Planes y Precios</h1>
+    <p>Elige el plan que mejor se adapte a tu creatividad. Cancela cuando quieras.</p>
+  </header>
+
+  <!-- SECCION DE TARJETAS DE PRECIOS -->
+  <section class="pricing-section">
+    <div class="pricing-container">
+
+      <!-- Plan Gratis -->
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Gratis</h3>
+          <div class="pricing-price">
+            <span class="price-amount">$0</span>
+            <span class="price-period">/mes</span>
+          </div>
+          <p class="pricing-desc">Perfecto para empezar a explorar</p>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Exportación en 720p</li>
+          <li><i class="fas fa-check"></i> 5 proyectos activos</li>
+          <li><i class="fas fa-check"></i> Filtros básicos</li>
+          <li><i class="fas fa-check"></i> 50 pistas musicales</li>
+          <li class="feature-disabled"><i class="fas fa-times"></i> Marca de agua en videos</li>
+          <li class="feature-disabled"><i class="fas fa-times"></i> Sin herramientas de IA</li>
+          <li class="feature-disabled"><i class="fas fa-times"></i> Sin soporte prioritario</li>
+        </ul>
+        <a href="download.html" class="btn-pricing">Empezar Gratis</a>
+      </div>
+
+      <!-- Plan Pro (Destacado) -->
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Más Popular</div>
+        <div class="pricing-header">
+          <h3>Pro</h3>
+          <div class="pricing-price">
+            <span class="price-amount">$9<span class="price-cents">.99</span></span>
+            <span class="price-period">/mes</span>
+          </div>
+          <p class="pricing-desc">Para creadores que buscan calidad</p>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Exportación en 4K</li>
+          <li><i class="fas fa-check"></i> Proyectos ilimitados</li>
+          <li><i class="fas fa-check"></i> Todos los filtros y efectos</li>
+          <li><i class="fas fa-check"></i> 10,000+ pistas musicales</li>
+          <li><i class="fas fa-check"></i> Sin marca de agua</li>
+          <li><i class="fas fa-check"></i> Subtítulos con IA</li>
+          <li class="feature-disabled"><i class="fas fa-times"></i> Sin renderizado en la nube</li>
+        </ul>
+        <a href="download.html" class="btn-pricing btn-pricing-featured">Elegir Pro</a>
+      </div>
+
+      <!-- Plan Enterprise -->
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3>Enterprise</h3>
+          <div class="pricing-price">
+            <span class="price-amount">$19<span class="price-cents">.99</span></span>
+            <span class="price-period">/mes</span>
+          </div>
+          <p class="pricing-desc">Para equipos y profesionales</p>
+        </div>
+        <ul class="pricing-features">
+          <li><i class="fas fa-check"></i> Exportación en 8K</li>
+          <li><i class="fas fa-check"></i> Proyectos ilimitados</li>
+          <li><i class="fas fa-check"></i> Todos los filtros y efectos</li>
+          <li><i class="fas fa-check"></i> Biblioteca completa</li>
+          <li><i class="fas fa-check"></i> Sin marca de agua</li>
+          <li><i class="fas fa-check"></i> Todas las herramientas de IA</li>
+          <li><i class="fas fa-check"></i> Renderizado en la nube</li>
+        </ul>
+        <a href="download.html" class="btn-pricing">Elegir Enterprise</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABLA COMPARATIVA -->
+  <section class="comparison-section">
+    <div class="comparison-container">
+      <h2 class="comparison-title">Comparación de Planes</h2>
+      <div class="table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>Gratis</th>
+              <th class="col-featured">Pro</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Resolución máxima</td>
+              <td>720p</td>
+              <td class="col-featured">4K</td>
+              <td>8K</td>
+            </tr>
+            <tr>
+              <td>Proyectos activos</td>
+              <td>5</td>
+              <td class="col-featured">Ilimitados</td>
+              <td>Ilimitados</td>
+            </tr>
+            <tr>
+              <td>Efectos y transiciones</td>
+              <td>Básicos</td>
+              <td class="col-featured">Todos</td>
+              <td>Todos + Personalizados</td>
+            </tr>
+            <tr>
+              <td>Pistas musicales</td>
+              <td>50</td>
+              <td class="col-featured">10,000+</td>
+              <td>10,000+ + Licencia comercial</td>
+            </tr>
+            <tr>
+              <td>Marca de agua</td>
+              <td><i class="fas fa-times" style="color: #ef4444;"></i></td>
+              <td class="col-featured"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+            </tr>
+            <tr>
+              <td>Subtítulos con IA</td>
+              <td><i class="fas fa-times" style="color: #ef4444;"></i></td>
+              <td class="col-featured"><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+              <td><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+            </tr>
+            <tr>
+              <td>Renderizado en la nube</td>
+              <td><i class="fas fa-times" style="color: #ef4444;"></i></td>
+              <td class="col-featured"><i class="fas fa-times" style="color: #ef4444;"></i></td>
+              <td><i class="fas fa-check" style="color: var(--primary-color);"></i></td>
+            </tr>
+            <tr>
+              <td>Soporte</td>
+              <td>Comunidad</td>
+              <td class="col-featured">Email prioritario</td>
+              <td>24/7 Dedicado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3 class="footer-logo">VideoApp</h3>
+        <p class="footer-text">
+          La herramienta definitiva para creadores de contenido. Edita,
+          transforma y comparte tus historias con el mundo.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul class="footer-links">
+          <li><a href="download.html">Descargar</a></li>
+          <li><a href="prices.html">Precios</a></li>
+          <li><a href="functions.html">Funciones</a></li>
+          <li><a href="#">Novedades</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Soporte</h4>
+        <ul class="footer-links">
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Términos de Servicio</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contáctanos</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> soporte@videoapp.com</p>
+          <p><i class="fas fa-phone"></i> + (591) 123-4567</p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 VideoApp Inc. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

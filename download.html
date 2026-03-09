@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VideoApp - Descargar</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- SECCION DE NAVBAR -->
+  <nav class="nav-bar">
+    <div class="logo">VideoApp</div>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="index.html">Inicio</a></li>
+      <li class="nav-item"><a href="functions.html">Funciones</a></li>
+      <li class="nav-item"><a href="prices.html">Precios</a></li>
+      <li class="nav-item"><a href="download.html" class="btn-nav">Descargar</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>Descarga VideoApp</h1>
+    <p>Disponible para todas las plataformas. Empieza a crear en minutos.</p>
+  </header>
+
+  <!-- SECCION DE DESCARGA -->
+  <section class="download-section">
+    <div class="download-container">
+
+      <div class="download-card">
+        <div class="download-icon">
+          <i class="fab fa-windows"></i>
+        </div>
+        <h3>Windows</h3>
+        <p class="download-version">Versión 3.2.1</p>
+        <p class="download-size">Tamaño: 185 MB</p>
+        <p class="download-compat">Windows 10 / 11 (64-bit)</p>
+        <a href="#" class="btn-download">
+          <i class="fas fa-download"></i> Descargar para Windows
+        </a>
+      </div>
+
+      <div class="download-card download-card-featured">
+        <div class="download-icon">
+          <i class="fab fa-apple"></i>
+        </div>
+        <h3>macOS</h3>
+        <p class="download-version">Versión 3.2.1</p>
+        <p class="download-size">Tamaño: 210 MB</p>
+        <p class="download-compat">macOS 12 Monterey o superior</p>
+        <a href="#" class="btn-download btn-download-featured">
+          <i class="fas fa-download"></i> Descargar para macOS
+        </a>
+      </div>
+
+      <div class="download-card">
+        <div class="download-icon">
+          <i class="fab fa-linux"></i>
+        </div>
+        <h3>Linux</h3>
+        <p class="download-version">Versión 3.2.1</p>
+        <p class="download-size">Tamaño: 170 MB</p>
+        <p class="download-compat">Ubuntu 20.04+ / Fedora 36+</p>
+        <a href="#" class="btn-download">
+          <i class="fas fa-download"></i> Descargar para Linux
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REQUISITOS DEL SISTEMA -->
+  <section class="requirements-section">
+    <div class="requirements-container">
+      <h2 class="requirements-title">Requisitos del Sistema</h2>
+      <div class="requirements-grid">
+        <div class="requirement-card">
+          <div class="requirement-icon"><i class="fas fa-microchip"></i></div>
+          <h4>Procesador</h4>
+          <p>Intel Core i5 / AMD Ryzen 5 o superior</p>
+        </div>
+        <div class="requirement-card">
+          <div class="requirement-icon"><i class="fas fa-memory"></i></div>
+          <h4>Memoria RAM</h4>
+          <p>8 GB mínimo, 16 GB recomendado</p>
+        </div>
+        <div class="requirement-card">
+          <div class="requirement-icon"><i class="fas fa-hdd"></i></div>
+          <h4>Almacenamiento</h4>
+          <p>2 GB de espacio libre para instalación</p>
+        </div>
+        <div class="requirement-card">
+          <div class="requirement-icon"><i class="fas fa-desktop"></i></div>
+          <h4>Tarjeta Gráfica</h4>
+          <p>GPU con 2 GB VRAM (NVIDIA / AMD / Intel)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <h2 class="faq-title">Preguntas Frecuentes</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>¿VideoApp es realmente gratis?</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, puedes usar VideoApp de forma gratuita con funciones básicas. El plan gratuito incluye exportación en
+              720p, filtros básicos y 5 proyectos activos. Para funciones avanzadas como IA y exportación en 4K, puedes
+              actualizar al plan Pro.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>¿Puedo cancelar mi suscripción en cualquier momento?</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutamente. No hay contratos ni compromisos. Puedes cancelar tu suscripción en cualquier momento desde
+              la configuración de tu cuenta y seguirás teniendo acceso hasta el final de tu período de facturación.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>¿Qué formatos de video soporta?</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>VideoApp soporta todos los formatos populares incluyendo MP4, MOV, AVI, MKV, WebM, y más. También soporta
+              archivos RAW de cámaras profesionales y formatos de hasta 8K de resolución.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>¿Necesito conexión a internet para editar?</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>No, VideoApp funciona completamente offline para la edición local. Solo necesitas conexión a internet
+              para las funciones de IA en la nube, el renderizado en la nube y para publicar directamente en redes
+              sociales.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>¿Ofrecen descuentos para estudiantes?</span>
+            <i class="fas fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, ofrecemos un 50% de descuento para estudiantes y educadores verificados. Contacta a nuestro equipo de
+              soporte con tu credencial educativa para obtener tu código de descuento.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3 class="footer-logo">VideoApp</h3>
+        <p class="footer-text">
+          La herramienta definitiva para creadores de contenido. Edita,
+          transforma y comparte tus historias con el mundo.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul class="footer-links">
+          <li><a href="download.html">Descargar</a></li>
+          <li><a href="prices.html">Precios</a></li>
+          <li><a href="functions.html">Funciones</a></li>
+          <li><a href="#">Novedades</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Soporte</h4>
+        <ul class="footer-links">
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Términos de Servicio</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contáctanos</h4>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> soporte@videoapp.com</p>
+          <p><i class="fas fa-phone"></i> + (591) 123-4567</p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 VideoApp Inc. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
